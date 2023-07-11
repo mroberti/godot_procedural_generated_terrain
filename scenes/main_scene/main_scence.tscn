@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://11gx0wybk1ge"]
 
 [ext_resource type="Texture2D" uid="uid://dp0qcm1yy4fr" path="res://assets/tilesets/Minifantasy_TinyOverworldAllTiles.png" id="1_24jb2"]
 [ext_resource type="Script" path="res://scenes/main_scene/main_scene.gd" id="2_sx52y"]
-[ext_resource type="PackedScene" uid="uid://7fukof5jn25s" path="res://assets/player/Player.tscn" id="3_8ioou"]
+[ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="3_8ioou"]
 [ext_resource type="PackedScene" path="res://scenes/manger/enemy_manager.tscn" id="4_wjvvu"]
 [ext_resource type="PackedScene" path="res://scenes/basic_enemy/basic_enemy.tscn" id="5_drinv"]
 [ext_resource type="PackedScene" uid="uid://tdl5vvutvd8" path="res://damage.tscn" id="6_ud3jk"]
@@ -164,7 +164,6 @@ texture_region_size = Vector2i(4, 4)
 11:9/0 = 0
 12:9/0 = 0
 13:9/0 = 0
-1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
 5:11/0 = 0
@@ -2049,6 +2048,7 @@ texture_region_size = Vector2i(4, 4)
 33:101/0 = 0
 34:101/0 = 0
 35:101/0 = 0
+1:11/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_bjxkh"]
 tile_size = Vector2i(4, 4)

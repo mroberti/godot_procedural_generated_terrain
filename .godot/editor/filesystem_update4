@@ -1,10 +1,3 @@
-res://assets/game_objects/main_scence.tscn
-res://assets/game_objects/Monster.gd
-res://assets/game_objects/monster.tscn
-res://game_objects/main_scence.tscn
-res://game_objects/monster.tscn
-res://scenes/main_scence.tscn
-res://scenes/monster.tscn
-res://scenes/main_scene.gd
-res://scenes/health_bar.tscn
+res://scenes/player/Player.tscn
+res://scenes/main_scene/main_scence.tscn
 res://scenes/main_scene/main_scene.gd
