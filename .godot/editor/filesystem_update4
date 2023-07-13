@@ -1,3 +1,4 @@
+res://scenes/basic_enemy/basic_enemy.tscn
 res://scenes/player/Player.tscn
 res://scenes/main_scene/main_scence.tscn
-res://scenes/main_scene/main_scene.gd
+res://scenes/manger/enemy_manager.tscn
