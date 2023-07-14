@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1689292983
+::res://::1689350250
 all_weapons.json::JSON::-1::1689006989::0::1::::<><>::
 damage.gd::GDScript::-1::1689006989::0::1::::<>Node<>::
 damage.tscn::PackedScene::39426581161427859::1689006989::0::1::::<><>::res://damage.gd
@@ -9,7 +9,7 @@ test.gd::GDScript::-1::1689006989::0::1::::<>Node<>::
 tiles2.png::CompressedTexture2D::2602458400941002598::1689006989::1689006989::1::::<><>::
 tile_map.gdshader::Shader::-1::1689006989::0::1::::<><>::
 ::res://assets/::1689014879
-::res://assets/spritesheets/::1689294872
+::res://assets/spritesheets/::1689294938
 fighter_all.png-0.png::CompressedTexture2D::1229648728906849900::1689294872::1689294938::1::::<><>::
 Figther_walk.png::CompressedTexture2D::1701917372910057189::1689006989::1689006989::1::::<><>::
 ::res://assets/tilesets/::1689006989
@@ -21,9 +21,9 @@ RtA_Tileset_v02.png::CompressedTexture2D::72915990658344232::1689006989::1689006
 ::res://scenes/::1689014879
 health_bar.gd::GDScript::-1::1689006989::0::1::::<>Panel<>::
 health_bar.tscn::PackedScene::2298478437793775927::1689007071::0::1::::<><>::res://scenes/health_bar.gd
-::res://scenes/basic_enemy/::1689208633
+::res://scenes/basic_enemy/::1689295202
 basic_enemy.gd::GDScript::-1::1689203062::0::1::::<>CharacterBody2D<>::
-basic_enemy.tscn::PackedScene::6129125330315524794::1689208633::0::1::::<><>::res://scenes/basic_enemy/basic_enemy.gd<>uid://rrwet7swellk
+basic_enemy.tscn::PackedScene::6129125330315524794::1689295202::0::1::::<><>::res://scenes/basic_enemy/basic_enemy.gd<>uid://rrwet7swellk
 ::res://scenes/main_scene/::1689208633
 main_scence.tscn::PackedScene::1878990479572468120::1689208633::0::1::::<><>::uid://dp0qcm1yy4fr<>res://scenes/main_scene/main_scene.gd<>uid://4mwi1o147dyh<>uid://nsvmgugl6wt4<>uid://ctk82fkwd0p3o<>uid://tdl5vvutvd8
 main_scene.gd::GDScript::-1::1689202319::0::1::::<>TileMap<>::
