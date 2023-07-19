@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yiolibeo2ag8"
-path="res://.godot/imported/Figther_walk.png-6e815bb37357407f19e4fe6f73da477a.ctex"
+uid="uid://ch8tpxvkfx71p"
+path="res://.godot/imported/all_fighter_frames.png-4964424a8209235e2d2487ea266439e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesheets/Figther_walk.png"
-dest_files=["res://.godot/imported/Figther_walk.png-6e815bb37357407f19e4fe6f73da477a.ctex"]
+source_file="res://assets/spritesheets/all_fighter_frames.png"
+dest_files=["res://.godot/imported/all_fighter_frames.png-4964424a8209235e2d2487ea266439e2.ctex"]
 
 [params]
 
