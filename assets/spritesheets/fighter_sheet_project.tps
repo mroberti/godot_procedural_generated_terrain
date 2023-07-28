@@ -26,15 +26,15 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <true/>
+        <false/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
         <uint>72</uint>
         <key>dataFormat</key>
-        <string>spritesheet-only</string>
+        <string>phaser</string>
         <key>textureFileName</key>
-        <filename>all_fighter_frames.png</filename>
+        <filename>fighter_remake.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrQualityLevel</key>
@@ -120,7 +120,13 @@
             </struct>
         </struct>
         <key>dataFileNames</key>
-        <map type="GFileNameMap"/>
+        <map type="GFileNameMap">
+            <key>json</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>../../../Godot-4-Procedural-Generation-main/procedural gen/assets/tilesets/fighter_remake.json</filename>
+            </struct>
+        </map>
         <key>multiPackMode</key>
         <enum type="SettingsBase::MultiPackMode">MultiPackOff</enum>
         <key>forceIdenticalLayout</key>
@@ -135,7 +141,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <false/>
+        <true/>
         <key>trimSpriteNames</key>
         <false/>
         <key>prependSmartFolderName</key>
@@ -167,10 +173,10 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Attack.png</key>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Dmg.png</key>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Jump.png</key>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_walk.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Attack.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Dmg.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Jump.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_walk.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -185,7 +191,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Die.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Die.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -200,7 +206,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -215,7 +221,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle_Special.png</key>
+            <key type="filename">//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle_Special.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -237,13 +243,13 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Attack.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Die.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Dmg.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle_Special.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Jump.png</filename>
-                    <filename>../../../../../Volumes/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_walk.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Attack.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Die.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Dmg.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Idle_Special.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_Jump.png</filename>
+                    <filename>//diskstation/media/Game Assets/commercial fine/2D/Tiles Minifantasy/Players_and_Creatures/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_walk.png</filename>
                 </array>
             </struct>
         </map>
