@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 700
+const SPEED = 500
+
 
 func _physics_process(delta):
 	velocity.x = Input.get_axis("ui_left", "ui_right")

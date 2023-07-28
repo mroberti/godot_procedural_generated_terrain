@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://ctk82fkwd0p3o"]
 
 [ext_resource type="Script" path="res://scenes/basic_enemy/basic_enemy.gd" id="1_rcnmc"]
-[ext_resource type="Texture2D" uid="uid://ch8tpxvkfx71p" path="res://assets/spritesheets/all_fighter_frames.png" id="2_dy37i"]
+[ext_resource type="Texture2D" uid="uid://ch8tpxvkfx71p" path="res://assets/spritesheets/all_fighter_frames.png" id="2_h13qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tej1m"]
 size = Vector2(25.7043, 8.03889)
@@ -104,7 +104,7 @@ shape = SubResource("RectangleShape2D_tej1m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_dy37i")
+texture = ExtResource("2_h13qc")
 hframes = 32
 vframes = 32
 frame = 416
