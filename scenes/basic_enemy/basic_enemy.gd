@@ -24,7 +24,7 @@ func _process(delta):
 func _move_randomly():
 	var num = randi_range ( 0,3 )
 	var tile_pos = get_parent().local_to_map(position)
-	print("Move? "+str(tile_pos))
+	#print("Move? "+str(tile_pos))
 	if(num==0):
 		tile_pos.x -= 1
 	elif(num==1):
