@@ -3,8 +3,8 @@ extends TileMap
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width = 28
-var height = 18
+var width = 4
+var height = 4
 const city_icon = preload("res://scenes/village.tscn")
 
 @onready var player = $Player
@@ -13,11 +13,14 @@ func _ready():
 	moisture.seed = -686559431 #randi()
 	temperature.seed = -175673643 #randi()
 	altitude.seed = 778520879 #randi()
-	altitude.frequency = 0.003
+	altitude.frequency = 0.001
 
 
 func _process(delta):
 	generate_chunk(player.position)
+	var guards = get_tree().get_nodes_in_group("monsters")
+	for temp_monster in guards:
+		generate_chunk(temp_monster.position)
 	
 
 func generate_chunk(position):
