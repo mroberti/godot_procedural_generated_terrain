@@ -1,12 +1,5 @@
-res://scenes/player/Player.tscn
-res://TileMap.gd
-res://scenes/State Machines/EnemyFollow.gd
-res://scenes/basic_enemy/basic_enemy.tscn
 res://tile_map.tscn
+res://TileMap.gd
+res://scenes/player/Player.tscn
+res://scenes/basic_enemy/basic_enemy.tscn
 res://scenes/manger/enemy_manager.tscn
-res://scenes/manger/enemy_manager.gd
-res://scenes/State Machines/EnemyWander.gd
-res://scenes/State Machines/StateMachine.gd
-res://scenes/basic_enemy/basic_enemy.gd
-res://scenes/State Machines/EnemyIdle.gd
-res://scenes/player/Player.gd

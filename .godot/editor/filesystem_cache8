@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1691160320
+::res://::1691164901
 biomes.png::CompressedTexture2D::6233908922665326020::1690640150::1690640150::1::::<><>::
 CharacterBody2D.gd::GDScript::-1::1690831088::0::1::::<>CharacterBody2D<>::
 icon.svg::CompressedTexture2D::5734203404100774228::1690550996::1690641992::1::::<><>::
@@ -7,9 +7,9 @@ old_character_code.gd::GDScript::-1::1690831122::0::1::::<>CharacterBody2D<>::
 old_enemy_code.gd::GDScript::-1::1690831219::0::1::::<>CharacterBody2D<>::
 State.gd::GDScript::-1::1690831659::0::1::::State<>Node<>::
 test.gd::GDScript::-1::1690550996::0::1::::<>Node<>::
-TileMap.gd::GDScript::-1::1690825813::0::1::::<>TileMap<>::
+TileMap.gd::GDScript::-1::1691160658::0::1::::<>TileMap<>::
 tiles2.png::CompressedTexture2D::2602458400941002598::1690550996::1690550996::1::::<><>::
-tile_map.tscn::PackedScene::1924909989822273503::1690897460::0::1::::<><>::res://TileMap.gd<>uid://cu20tl7xo5ksi<>uid://4mwi1o147dyh<>uid://nsvmgugl6wt4<>uid://ctk82fkwd0p3o
+tile_map.tscn::PackedScene::1924909989822273503::1691162403::0::1::::<><>::res://TileMap.gd<>uid://cu20tl7xo5ksi<>uid://4mwi1o147dyh<>uid://nsvmgugl6wt4<>uid://ctk82fkwd0p3o
 ::res://assets/::1690640150
 ::res://assets/icons/::1690556655
 city.png::CompressedTexture2D::430114899525376395::1690556653::1690556655::1::::<><>::
@@ -24,20 +24,21 @@ fighter_remake.png::CompressedTexture2D::7168179345926836956::1690552002::169055
 health_bar.gd::GDScript::-1::1690550996::0::1::::<>Panel<>::
 health_bar.tscn::PackedScene::2298478437793775927::1690550996::0::1::::<><>::res://scenes/health_bar.gd
 village.tscn::PackedScene::7127437253680465575::1690557280::0::1::::<><>::uid://gel6uthj27d4
-::res://scenes/basic_enemy/::1690897460
-basic_enemy.gd::GDScript::-1::1690841948::0::1::::BasicEnemy<>CharacterBody2D<>::
-basic_enemy.tscn::PackedScene::6129125330315524794::1690897460::0::1::::<><>::res://scenes/basic_enemy/basic_enemy.gd<>uid://ch8tpxvkfx71p<>res://scenes/State Machines/state_machine.tscn<>res://scenes/State Machines/EnemyIdle.gd
+::res://scenes/basic_enemy/::1691164718
+basic_enemy.gd::GDScript::-1::1691162155::0::1::::BasicEnemy<>CharacterBody2D<>::
+basic_enemy.tscn::PackedScene::6129125330315524794::1691164876::0::1::::<><>::res://scenes/basic_enemy/basic_enemy.gd<>uid://ch8tpxvkfx71p<>res://scenes/State Machines/state_machine.tscn<>res://scenes/State Machines/EnemyIdle.gd<>res://scenes/State Machines/EnemyWander.gd<>res://scenes/State Machines/EnemyFollow.gd
 ::res://scenes/main_scene/::1690550996
-::res://scenes/manger/::1690897461
-enemy_manager.gd::GDScript::-1::1690718615::0::1::::<>Node<>::
-enemy_manager.tscn::PackedScene::950910599567197411::1690897461::0::1::::<><>::res://scenes/manger/enemy_manager.gd
-::res://scenes/player/::1690897460
-Player.gd::GDScript::-1::1690837216::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::2061600447199460179::1690897460::0::1::::<><>::res://scenes/player/Player.gd<>uid://cnxxq0c5df8m7
-::res://scenes/State Machines/::1690841912
-EnemyIdle.gd::GDScript::-1::1690841912::0::1::::EnemyIdle<>State<>::
-EnemyWander.gd::GDScript::-1::1690841275::0::1::::EnemyWander<>State<>::
-StateMachine.gd::GDScript::-1::1690837649::0::1::::<>Node<>::
+::res://scenes/manger/::1691162403
+enemy_manager.gd::GDScript::-1::1691161125::0::1::::<>Node<>::
+enemy_manager.tscn::PackedScene::950910599567197411::1691162403::0::1::::<><>::res://scenes/manger/enemy_manager.gd
+::res://scenes/player/::1691162403
+Player.gd::GDScript::-1::1691162351::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::2061600447199460179::1691162403::0::1::::<><>::res://scenes/player/Player.gd<>uid://cnxxq0c5df8m7
+::res://scenes/State Machines/::1691162398
+EnemyFollow.gd::GDScript::-1::1691162398::0::1::::EnemyFollow<>State<>::
+EnemyIdle.gd::GDScript::-1::1691162161::0::1::::EnemyIdle<>State<>::
+EnemyWander.gd::GDScript::-1::1691162320::0::1::::EnemyWander<>State<>::
+StateMachine.gd::GDScript::-1::1691161733::0::1::::<>Node<>::
 state_machine.tscn::PackedScene::-1::1690841038::0::1::::<><>::res://scenes/State Machines/StateMachine.gd
 ::res://script_templates/::1690550996
 ::res://script_templates/node/::1690550996
