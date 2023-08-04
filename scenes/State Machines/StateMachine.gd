@@ -32,6 +32,8 @@ func on_child_transition(state, new_state_name):
 		return
 		
 	if current_state:
+		print("Trying to transition from: "+str(current_state))
+		print("Trying to transition to: "+str(new_state))
 		current_state.Exit()
 	
 	new_state.Enter()

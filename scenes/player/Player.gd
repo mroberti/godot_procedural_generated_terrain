@@ -7,7 +7,7 @@ extends CharacterBody2D
 # }
 @onready var tile_map = get_parent()
 
-const SPEED = 700
+const SPEED = 200
 
 func _ready():
 	position = tile_map.map_to_local(Vector2i(-12,0))

@@ -5,7 +5,7 @@ extends Node
 const SPAWN_RADIUS = 330
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for n in range(10):
+	for n in range(1):
 		var tile_pos = get_parent().local_to_map(player.position)
 		var enemy = basic_enemy_scene.instantiate() as CharacterBody2D
 		get_parent().call_deferred("add_child", enemy)

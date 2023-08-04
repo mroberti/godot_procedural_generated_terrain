@@ -1,5 +1,6 @@
-EnemyIdle
+EnemyFollow
 EnemyWander
+EnemyIdle
 Node
 CharacterBody2D
 Sprite2D

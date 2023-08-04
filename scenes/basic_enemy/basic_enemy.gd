@@ -19,7 +19,7 @@ func _physics_process(delta):
 		elif velocity.x < 0 and velocity.y < 0 :
 			$AnimationPlayer.play("up_left")
 
-func random_idle():
+func random_idle_animation():
 	var num = randi_range ( 0,3 )
 	if(num==0):
 		$AnimationPlayer.play("idle_down_right")
