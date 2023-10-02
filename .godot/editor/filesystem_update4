@@ -2,4 +2,3 @@ res://tile_map.tscn
 res://TileMap.gd
 res://scenes/player/Player.tscn
 res://scenes/basic_enemy/basic_enemy.tscn
-res://scenes/manger/enemy_manager.tscn
