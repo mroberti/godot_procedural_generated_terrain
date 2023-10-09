@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name BasicEnemy
 var status = "wander"
-var animations
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("monsters")

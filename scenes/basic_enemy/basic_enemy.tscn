@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/basic_enemy/basic_enemy.gd" id="1_rcnmc"]
 [ext_resource type="Texture2D" uid="uid://ch8tpxvkfx71p" path="res://assets/spritesheets/all_fighter_frames.png" id="2_h13qc"]
-[ext_resource type="PackedScene" path="res://scenes/State Machines/state_machine.tscn" id="3_m4gdo"]
+[ext_resource type="PackedScene" uid="uid://c1i4xc24p4kkq" path="res://scenes/State Machines/state_machine.tscn" id="3_m4gdo"]
 [ext_resource type="Script" path="res://scenes/State Machines/EnemyIdle.gd" id="4_ld83o"]
 [ext_resource type="Script" path="res://scenes/State Machines/EnemyWander.gd" id="5_g18t8"]
 [ext_resource type="Script" path="res://scenes/State Machines/EnemyFollow.gd" id="6_kq4bb"]
@@ -172,16 +172,16 @@ libraries = {
 }
 
 [node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("3_m4gdo")]
-initial_state = NodePath("Follow")
+initial_state = NodePath("EnemyWander")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+[node name="EnemyIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("4_ld83o")
 enemy = NodePath("../..")
 
-[node name="Wander" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+[node name="EnemyWander" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("5_g18t8")
 enemy = NodePath("../..")
 
-[node name="Follow" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+[node name="EnemyFollow" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("6_kq4bb")
 enemy = NodePath("../..")

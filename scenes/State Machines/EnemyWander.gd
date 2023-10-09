@@ -3,7 +3,7 @@ class_name EnemyWander
 
 @export var enemy: CharacterBody2D
 @export var move_speed := 20.0
-var player: CharacterBody2D
+var player : CharacterBody2D
 
 var move_direction : Vector2
 var wander_time : float
@@ -20,16 +20,14 @@ func Enter():
 func Update(delta:float):
 	if wander_time > 0:
 		wander_time -= delta
-
 	else:
 		randomize_wander()
 
 func Physics_Update(delta: float):
 	if enemy:
 		enemy.velocity = move_direction * move_speed
-		
+
 	var direction = player.global_position - enemy.global_position
-	
-	if direction.length() < 60:
-		Transitioned.emit(self, "Follow")
-		
+	#print("Range "+str(direction.length() ))
+	if direction.length() < 30:
+		Transitioned.emit(self, "EnemyFollow")

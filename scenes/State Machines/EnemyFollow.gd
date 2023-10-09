@@ -2,7 +2,7 @@ extends State
 class_name EnemyFollow
 
 @export var enemy: CharacterBody2D
-@export var move_speed := 40.0
+@export var move_speed := 20.0
 
 var player: CharacterBody2D
 
@@ -11,12 +11,13 @@ func Enter():
 
 func Physics_Update(delta: float):
 	var direction = player.global_position - enemy.global_position
-	print("Distance: "+str(direction.length() ))
-	if direction.length() > 10:
+	#print("Distance: "+str(direction.length() ))
+	if direction.length() > 15:
 		enemy.velocity = direction.normalized() * move_speed
 	else:
-		enemy.velocity = Vector2()
+		enemy._attack(player)
+		#enemy.velocity = Vector2()
 
 	if direction.length() > 50:
-		Transitioned.emit(self,"wander")
-	
+		Transitioned.emit(self,"EnemyWander")
+

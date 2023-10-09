@@ -10,7 +10,7 @@ var idle_time : float
 
 func randomize_idle():
 	enemy.status = "idle"
-	enemy.random_idle()
+	enemy.random_idle_animation()
 	idle_time = randf_range(1,3)
 	
 func Enter():
