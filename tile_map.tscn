@@ -1,55 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://2oo8sfrse20b"]
+[gd_scene load_steps=9 format=3 uid="uid://2oo8sfrse20b"]
 
-[ext_resource type="Script" path="res://TileMap.gd" id="2_6sewn"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_hekoe"]
 [ext_resource type="Texture2D" uid="uid://cu20tl7xo5ksi" path="res://biomes.png" id="2_reyrs"]
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="3_gfihn"]
 [ext_resource type="PackedScene" uid="uid://nsvmgugl6wt4" path="res://scenes/manger/enemy_manager.tscn" id="4_nl42p"]
 [ext_resource type="PackedScene" uid="uid://blwmiulaqa5ho" path="res://scenes/basic_enemy_2/enemy.tscn" id="5_3cj86"]
-
-[sub_resource type="GDScript" id="GDScript_rvbat"]
-script/source = "extends Node
-
-@export var initial_state : State
-
-var current_state : State
-var states : Dictionary = {}
-
-func _ready():
-	for child in get_children():
-		if child is State:
-			states[child.name.to_lower()] = child
-			child.Transitioned.connect(on_child_transition)
-			
-	if initial_state:
-		initial_state.Enter()
-		current_state = initial_state
-
-func _process(delta):
-	if current_state:
-		current_state.Update(delta)
-		
-func _physics_process(delta):
-	if current_state:
-		current_state.Physics_Update(delta)
-
-func on_child_transition(state, new_state_name):
-	if state != current_state:
-		return
-	
-	var new_state = states.get(new_state_name.to_lower())
-	if !new_state:
-		return
-		
-	if current_state:
-		current_state.exit()
-	
-	new_state.enter()
-	
-	current_state = new_state
-	
-	
-	
-"
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_868kg"]
 
@@ -129,7 +84,6 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_yomo6")
 
 [node name="Main Scene" type="Node2D"]
-script = SubResource("GDScript_rvbat")
 
 [node name="TileMap" type="TileMap" parent="." groups=["monsters"]]
 texture_filter = 1
@@ -137,7 +91,7 @@ tile_set = SubResource("TileSet_md0cj")
 format = 2
 layer_0/name = "Biomes"
 layer_0/tile_data = PackedInt32Array(65533, 65536, 1)
-script = ExtResource("2_6sewn")
+script = ExtResource("2_hekoe")
 
 [node name="Player" parent="TileMap" instance=ExtResource("3_gfihn")]
 

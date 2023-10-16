@@ -6,6 +6,9 @@ var altitude = FastNoiseLite.new()
 var width = 26
 var height = 30
 const city_icon = preload("res://scenes/village.tscn")
+var time_passed = 0
+var calls_per_sec = 1
+var time_for_one_call = 1 / calls_per_sec 
 
 @onready var player = $Player
 
@@ -14,10 +17,17 @@ func _ready():
 	temperature.seed = -175673643 #randi()
 	altitude.seed = 778520879 #randi()
 	altitude.frequency = 0.001
+	scrnOutput.print("Hello World!")
+	scrnOutput.print("\n\nBIONIC VISUAL CORTEX TERMINAL\nCATALOG #075/kfb\n43MM O.D. F/0.95\nZOOM RATION:20.1 TO 1\n2135 LINE 60 HZ\nEXTENDED CHROMATIC RESPONSE\nCLASS JC  [pulse freq=7.0 height=0.0][pulse color=#FF0000 freq=7.0]CLASSIFIED[/pulse][/pulse]\n\n BIONIC NEURO-LINK\nBIPEDAL ASSEMBLY\nCATALOG #914 PAH\n
+	NEURO FEEDBACK TERMINATED\nPOWER SUPPLY:\nATOMIC TYPE AED-9A\n4920 WATT CONTINUOS DUTY\n\n[pulse freq=7.0 height=0.0][pulse color=#FF0000 freq=7.0]CLASSIFIED[/pulse][/pulse]\nNOMINAL DOUBLE GAIN\nOVERLOAD FOLLOWER\n2100 WATT RESERVE\nINTERMITTENT DUTY\nCLASS CC")
 
 
 func _process(delta):
-	generate_chunk(player.position)
+	time_passed += delta
+
+	if time_passed >= time_for_one_call:
+		scrnOutput.print(str(Time.get_ticks_msec()))
+		time_passed -= time_for_one_call 
 	var guards = get_tree().get_nodes_in_group("monsters")
 	for temp_monster in guards:
 		generate_chunk(temp_monster.position)
