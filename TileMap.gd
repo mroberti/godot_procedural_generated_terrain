@@ -3,35 +3,57 @@ extends TileMap
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width = 26
-var height = 30
+var width = 10
+var height = 10
 const city_icon = preload("res://scenes/village.tscn")
-var time_passed = 0
-var calls_per_sec = 1
-var time_for_one_call = 1 / calls_per_sec 
+var _timer = null
+@onready var player = $"../Player"
 
-@onready var player = $Player
+
 
 func _ready():
+	# moisture.seed = -686559431 #randi()
+	# temperature.seed = -175673643 #randi()
+	# altitude.seed = 778520879 #randi()
+	# altitude.frequency = 0.001
+	
 	moisture.seed = -686559431 #randi()
 	temperature.seed = -175673643 #randi()
 	altitude.seed = 778520879 #randi()
-	altitude.frequency = 0.001
-	scrnOutput.print("Hello World!")
-	scrnOutput.print("\n\nBIONIC VISUAL CORTEX TERMINAL\nCATALOG #075/kfb\n43MM O.D. F/0.95\nZOOM RATION:20.1 TO 1\n2135 LINE 60 HZ\nEXTENDED CHROMATIC RESPONSE\nCLASS JC  [pulse freq=7.0 height=0.0][pulse color=#FF0000 freq=7.0]CLASSIFIED[/pulse][/pulse]\n\n BIONIC NEURO-LINK\nBIPEDAL ASSEMBLY\nCATALOG #914 PAH\n
-	NEURO FEEDBACK TERMINATED\nPOWER SUPPLY:\nATOMIC TYPE AED-9A\n4920 WATT CONTINUOS DUTY\n\n[pulse freq=7.0 height=0.0][pulse color=#FF0000 freq=7.0]CLASSIFIED[/pulse][/pulse]\nNOMINAL DOUBLE GAIN\nOVERLOAD FOLLOWER\n2100 WATT RESERVE\nINTERMITTENT DUTY\nCLASS CC")
-
-
-func _process(delta):
-	time_passed += delta
-
-	if time_passed >= time_for_one_call:
-		scrnOutput.print(str(Time.get_ticks_msec()))
-		time_passed -= time_for_one_call 
-	var guards = get_tree().get_nodes_in_group("monsters")
-	for temp_monster in guards:
-		generate_chunk(temp_monster.position)
+	altitude.frequency = 0.0021
 	
+	# for n in range(5):
+	# 	var tile_pos = local_to_map(Vector2i(-200,-20))
+	# 	var temp_monster = basic_enemy.instantiate()
+	# 	add_child(temp_monster)
+	# 	monsters.push_back(temp_monster)
+	# 	var rand_x = randi_range ( -5,5 )
+	# 	var rand_y = randi_range ( -5,5 )
+	# 	temp_monster.position = map_to_local (Vector2i(tile_pos.x-rand_x,tile_pos.y-rand_y))
+	# 	print("Adding at "+str(local_to_map(temp_monster.position)))
+	# 	print(temp_monster.position)
+	# 	print(str(monsters.size()))
+	# 	generate_chunk(temp_monster.position)
+
+	generate_chunk(player.position)
+	_timer = Timer.new()
+	add_child(_timer)
+
+	_timer.timeout.connect(_on_Timer_timeout)
+	_timer.set_wait_time(0.25)
+	_timer.set_one_shot(false) # Make sure it loops
+	_timer.start()
+
+
+func _on_Timer_timeout():
+	# var the_monsters = get_tree().get_nodes_in_group("monsters")
+	# for tempMonster in the_monsters:
+	# 	if tempMonster != null:
+	# 		print("Monster location: "+str(tempMonster.position))
+	# 		tempMonster.random_idle_animation()
+	get_tree().call_group("monsters", "random_idle_animation")
+	get_tree().call_group("monsters", "_move_randomly", self)
+	# 		tempMonster._move_randomly(self)
 
 func generate_chunk(position):
 	var tile_pos = local_to_map(position)

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://2oo8sfrse20b"]
 
-[ext_resource type="PackedScene" uid="uid://b0ff2tyoh62tv" path="res://scenes/GameCamera/game_camera.tscn" id="1_ssemm"]
-[ext_resource type="PackedScene" uid="uid://byj514qti8eh4" path="res://scenes/manger/enemy_manager.tscn" id="1_v7ocx"]
 [ext_resource type="Script" path="res://TileMap.gd" id="2_hekoe"]
 [ext_resource type="Texture2D" uid="uid://cu20tl7xo5ksi" path="res://biomes.png" id="2_reyrs"]
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="3_gfihn"]
+[ext_resource type="PackedScene" uid="uid://nsvmgugl6wt4" path="res://scenes/manger/enemy_manager.tscn" id="4_nl42p"]
+[ext_resource type="PackedScene" uid="uid://blwmiulaqa5ho" path="res://scenes/basic_enemy_2/enemy.tscn" id="5_3cj86"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_868kg"]
 
@@ -85,10 +85,6 @@ sources/1 = SubResource("TileSetAtlasSource_yomo6")
 
 [node name="Main Scene" type="Node2D"]
 
-[node name="EnemyManager" parent="." instance=ExtResource("1_v7ocx")]
-
-[node name="GameCamera" parent="." instance=ExtResource("1_ssemm")]
-
 [node name="TileMap" type="TileMap" parent="." groups=["monsters"]]
 texture_filter = 1
 tile_set = SubResource("TileSet_md0cj")
@@ -97,4 +93,8 @@ layer_0/name = "Biomes"
 layer_0/tile_data = PackedInt32Array(65533, 65536, 1)
 script = ExtResource("2_hekoe")
 
-[node name="Player" parent="." instance=ExtResource("3_gfihn")]
+[node name="Player" parent="TileMap" instance=ExtResource("3_gfihn")]
+visible = false
+
+[node name="EnemyManager" parent="TileMap" instance=ExtResource("4_nl42p")]
+basic_enemy_scene = ExtResource("5_3cj86")

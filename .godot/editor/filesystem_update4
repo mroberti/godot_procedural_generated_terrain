@@ -1,2 +1,8 @@
+res://tile_map.tscn
+res://scenes/manger/enemy_manager.tscn
+res://scenes/manger/enemy_manager.gd
 res://TileMap.gd
-res://addons/onscreen_output/output.tscn
+res://scenes/basic_enemy/enemy.gd
+res://scenes/player/Player.tscn
+res://scenes/player/Player.gd
+res://scenes/GameCamera/game_camera.tscn

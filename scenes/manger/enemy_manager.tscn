@@ -1,12 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://nsvmgugl6wt4"]
+[gd_scene load_steps=3 format=3 uid="uid://byj514qti8eh4"]
 
-[ext_resource type="Script" path="res://scenes/manger/enemy_manager.gd" id="1_r4e13"]
+[ext_resource type="Script" path="res://scenes/manger/enemy_manager.gd" id="1_ckic4"]
+[ext_resource type="PackedScene" uid="uid://blwmiulaqa5ho" path="res://scenes/basic_enemy/enemy.tscn" id="2_tr03l"]
 
 [node name="EnemyManager" type="Node"]
-script = ExtResource("1_r4e13")
+script = ExtResource("1_ckic4")
+basic_enemy_scene = ExtResource("2_tr03l")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 0.053
 autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_move_enemies"]
