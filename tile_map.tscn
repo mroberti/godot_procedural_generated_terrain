@@ -1,14 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://2oo8sfrse20b"]
+[gd_scene load_steps=11 format=3 uid="uid://2oo8sfrse20b"]
 
 [ext_resource type="PackedScene" uid="uid://b0ff2tyoh62tv" path="res://scenes/GameCamera/game_camera.tscn" id="1_ssemm"]
 [ext_resource type="PackedScene" uid="uid://byj514qti8eh4" path="res://scenes/manger/enemy_manager.tscn" id="1_v7ocx"]
 [ext_resource type="Script" path="res://TileMap.gd" id="2_hekoe"]
 [ext_resource type="Texture2D" uid="uid://cu20tl7xo5ksi" path="res://biomes.png" id="2_reyrs"]
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="3_gfihn"]
+[ext_resource type="Texture2D" uid="uid://delsiw56o1f88" path="res://assets/spritesheets/Minifantasy_TinyOverworldAllTiles.png" id="4_x0yv7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_868kg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yomo6"]
+resource_name = "Biomes"
 texture = ExtResource("2_reyrs")
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -73,15 +75,113 @@ texture = ExtResource("2_reyrs")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47mfa"]
+resource_name = "MiniFantasy Overworld"
+texture = ExtResource("4_x0yv7")
+texture_region_size = Vector2i(4, 4)
+1:56/0 = 0
+1:56/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:56/0/physics_layer_0/angular_velocity = 0.0
+2:56/0 = 0
+2:56/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:56/0/physics_layer_0/angular_velocity = 0.0
+3:56/0 = 0
+3:56/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:56/0/physics_layer_0/angular_velocity = 0.0
+3:57/0 = 0
+3:57/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:57/0/physics_layer_0/angular_velocity = 0.0
+3:58/0 = 0
+3:58/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:58/0/physics_layer_0/angular_velocity = 0.0
+2:58/0 = 0
+2:58/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:58/0/physics_layer_0/angular_velocity = 0.0
+2:59/0 = 0
+2:59/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:59/0/physics_layer_0/angular_velocity = 0.0
+1:60/0 = 0
+1:60/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:60/0/physics_layer_0/angular_velocity = 0.0
+1:59/0 = 0
+1:59/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:59/0/physics_layer_0/angular_velocity = 0.0
+1:58/0 = 0
+1:58/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:58/0/physics_layer_0/angular_velocity = 0.0
+1:57/0 = 0
+1:57/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:57/0/physics_layer_0/angular_velocity = 0.0
+2:57/0 = 0
+2:57/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:57/0/physics_layer_0/angular_velocity = 0.0
+3:59/0 = 0
+3:59/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:59/0/physics_layer_0/angular_velocity = 0.0
+3:60/0 = 0
+3:60/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:60/0/physics_layer_0/angular_velocity = 0.0
+2:60/0 = 0
+2:60/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:60/0/physics_layer_0/angular_velocity = 0.0
+1:54/0 = 0
+1:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:54/0/physics_layer_0/angular_velocity = 0.0
+2:54/0 = 0
+2:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:54/0/physics_layer_0/angular_velocity = 0.0
+3:54/0 = 0
+3:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:54/0/physics_layer_0/angular_velocity = 0.0
+4:54/0 = 0
+4:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:54/0/physics_layer_0/angular_velocity = 0.0
+6:54/0 = 0
+6:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:54/0/physics_layer_0/angular_velocity = 0.0
+7:54/0 = 0
+7:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:54/0/physics_layer_0/angular_velocity = 0.0
+8:54/0 = 0
+8:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:54/0/physics_layer_0/angular_velocity = 0.0
+9:54/0 = 0
+9:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:54/0/physics_layer_0/angular_velocity = 0.0
+11:54/0 = 0
+11:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:54/0/physics_layer_0/angular_velocity = 0.0
+12:54/0 = 0
+12:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:54/0/physics_layer_0/angular_velocity = 0.0
+13:54/0 = 0
+13:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:54/0/physics_layer_0/angular_velocity = 0.0
+14:54/0 = 0
+14:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:54/0/physics_layer_0/angular_velocity = 0.0
+16:54/0 = 0
+16:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+16:54/0/physics_layer_0/angular_velocity = 0.0
+17:54/0 = 0
+17:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+17:54/0/physics_layer_0/angular_velocity = 0.0
+18:54/0 = 0
+18:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+18:54/0/physics_layer_0/angular_velocity = 0.0
+19:54/0 = 0
+19:54/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+19:54/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_md0cj"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_868kg")
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Cliffs"
-terrain_set_0/terrain_0/color = Color(0.796078, 0.137255, 0.780392, 1)
-custom_data_layer_0/name = "custom_data_layer"
+custom_data_layer_0/name = "Walkable"
 custom_data_layer_0/type = 1
+custom_data_layer_1/name = "Moist"
+custom_data_layer_1/type = 4
 sources/1 = SubResource("TileSetAtlasSource_yomo6")
+sources/2 = SubResource("TileSetAtlasSource_47mfa")
 
 [node name="Main Scene" type="Node2D"]
 
@@ -91,6 +191,7 @@ sources/1 = SubResource("TileSetAtlasSource_yomo6")
 
 [node name="TileMap" type="TileMap" parent="." groups=["monsters"]]
 texture_filter = 1
+position = Vector2(7, -2)
 tile_set = SubResource("TileSet_md0cj")
 format = 2
 layer_0/name = "Biomes"

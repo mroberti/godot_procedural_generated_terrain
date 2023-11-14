@@ -11,7 +11,7 @@ var buttons = {
 const SPEED = 200
 
 func _ready():
-	position = tile_map.map_to_local(Vector2i(-75,200))
+	position = tile_map.map_to_local(Vector2i(-75,100))
 	tile_map.generate_chunk(position)
 
 
@@ -71,4 +71,4 @@ func move_on_map(direction):
 
 func check_valid_tile(target_location):
 	var data = tile_map.get_cell_tile_data(0, target_location)
-	return data.get_custom_data("custom_data_layer")
+	return data.get_custom_data("Walkable")

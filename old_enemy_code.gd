@@ -85,4 +85,4 @@ func move_on_map(direction):
 func check_valid_tile(target_location):
 	var data = tile_map.get_cell_tile_data(0, target_location)
 	
-	return data.get_custom_data("custom_data_layer")
+	return data.get_custom_data("Walkable")

@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name BasicEnemy
 var status = "wander"
 var animations
-var move_distance = 20
+var move_distance = 1
 
 
 # Called when the node enters the scene tree for the first time.
@@ -64,5 +64,4 @@ func move_on_map(tile_map,direction):
 
 func check_valid_tile(tile_map,target_location):
 	var data = tile_map.get_cell_tile_data(0, target_location)
-	return true
-	#return data.get_custom_data("custom_data_layer")
+	return data.get_custom_data("Walkable")
