@@ -63,5 +63,10 @@ func move_on_map(tile_map,direction):
 
 
 func check_valid_tile(tile_map,target_location):
-	var data = tile_map.get_cell_tile_data(0, target_location)
-	return data.get_custom_data("Walkable")
+	var check = tile_map.get_cell_atlas_coords(0,target_location,false)
+	print(check)
+	if(check != Vector2i(-1,-1)):
+		var data = tile_map.get_cell_tile_data(0, target_location)
+		return data.get_custom_data("Walkable")
+	else:
+		return false
