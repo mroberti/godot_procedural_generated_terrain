@@ -3,8 +3,8 @@ extends TileMap
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width = 25
-var height = 25
+var width = 50
+var height = 50
 const city_icon = preload("res://scenes/village.tscn")
 var _timer = null
 @onready var player = $"../Player"
@@ -15,7 +15,7 @@ func _ready():
 	temperature.seed = -175673643 #randi()
 	altitude.seed = 778520879 #randi()
 	terrain_randomizer.seed = altitude.seed
-	altitude.frequency = 0.001
+	altitude.frequency = 0.00125
 
 	generate_chunk(player.position)
 	_timer = Timer.new()
@@ -51,8 +51,14 @@ func generate_chunk(position):
 			if(get_cell_atlas_coords(0,coords,false) == Vector2i(-1,-1)):
 				# A cell doesn't exist at these coordinates, so 
 				# we're creating one
-				if(alt>=0 and alt<27):
+				if(alt>=0 and alt<23):
+					atlas_coords = Vector2(13,2)
+					set_cell(0, coords,2, atlas_coords, 0 )
+				if(alt>=23 and alt<26):
 					atlas_coords = Vector2(14,2)
+					set_cell(0, coords,2, atlas_coords, 0 )
+				if(alt>=26 and alt<27):
+					atlas_coords = Vector2(15,0)
 					set_cell(0, coords,2, atlas_coords, 0 )
 				if(alt>=27 and alt<30):
 					# Trees....let's seed a terrain_randomizer for reporduceable 
