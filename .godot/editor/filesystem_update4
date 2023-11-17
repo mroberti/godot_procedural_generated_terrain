@@ -1,7 +1,10 @@
-res://TileMap.gd
 res://tile_map.tscn
+res://addons/panku_console/res/panku_console_theme.tres
 res://scenes/player/Player.gd
+res://TileMap.gd
 res://scenes/manger/enemy_manager.tscn
-res://scenes/player/Player.tscn
 res://scenes/GameCamera/game_camera.tscn
 res://scenes/basic_enemy/enemy.tscn
+res://addons/panku_console/console.tscn
+res://scenes/manger/enemy_manager.gd
+res://scenes/basic_enemy/enemy.gd

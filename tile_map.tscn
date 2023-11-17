@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://2oo8sfrse20b"]
+[gd_scene load_steps=14 format=3 uid="uid://2oo8sfrse20b"]
 
 [ext_resource type="PackedScene" uid="uid://b0ff2tyoh62tv" path="res://scenes/GameCamera/game_camera.tscn" id="1_ssemm"]
 [ext_resource type="PackedScene" uid="uid://byj514qti8eh4" path="res://scenes/manger/enemy_manager.tscn" id="1_v7ocx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="3_gfihn"]
 [ext_resource type="Texture2D" uid="uid://delsiw56o1f88" path="res://assets/spritesheets/Minifantasy_TinyOverworldAllTiles.png" id="4_x0yv7"]
 [ext_resource type="Texture2D" uid="uid://v0ls1jjvgt8o" path="res://assets/spritesheets/TinyRTS_v06/TinyRTS_v06.png" id="5_x686h"]
+[ext_resource type="PackedScene" uid="uid://cyftuo4syatlv" path="res://addons/panku_console/console.tscn" id="8_3mib6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_868kg"]
 
@@ -6836,5 +6837,16 @@ tile_set = SubResource("TileSet_md0cj")
 cell_quadrant_size = 8
 format = 2
 script = ExtResource("2_hekoe")
+level1 = -500.0
+level2 = -40.0
+level3 = -15.0
+level5 = 4.0
+level6 = 28.63
+level7 = 56.975
+level8 = 70.885
+level9 = 500.0
+granularity = -0.005
 
 [node name="Player" parent="." instance=ExtResource("3_gfihn")]
+
+[node name="Console" parent="." instance=ExtResource("8_3mib6")]

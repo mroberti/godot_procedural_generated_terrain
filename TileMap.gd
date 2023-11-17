@@ -8,6 +8,16 @@ var height = 50
 const city_icon = preload("res://scenes/village.tscn")
 var _timer = null
 @onready var player = $"../Player"
+@export var level1: float = -35.0
+@export var level2: float = -23.0
+@export var level3: float = -5
+@export var level4: float = -0
+@export var level5: float = 2
+@export var level6: float = 5
+@export var level7: float = 7
+@export var level8: float = 20
+@export var level9: float = 37
+@export var granularity:float = 0.0013
 var terrain_randomizer = RandomNumberGenerator.new()
 
 func _ready():
@@ -15,14 +25,14 @@ func _ready():
 	temperature.seed = -175673643 #randi()
 	altitude.seed = 778520879 #randi()
 	terrain_randomizer.seed = altitude.seed
-	altitude.frequency = 0.00125
+	altitude.frequency = 0.0013
 
 	generate_chunk(player.position)
 	_timer = Timer.new()
 	add_child(_timer)
 
 	_timer.timeout.connect(_on_Timer_timeout)
-	_timer.set_wait_time(5.0)
+	_timer.set_wait_time(0.1)
 	_timer.set_one_shot(false) # Make sure it loops
 	_timer.start()
 
@@ -39,31 +49,38 @@ func _on_Timer_timeout():
 
 func generate_chunk(position):
 	var tile_pos = local_to_map(position)
-				
+	altitude.frequency = granularity
 	for x in range(width):
 		for y in range(height):
 			var coords = Vector2i(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)
 			var alt = altitude.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*150
 			var atlas_coords
+			# print("Alt: "+str(alt))
+			#print("Alt: "+str(alt))
 			# 1,9 Grass
 			# 2,33 Water
 			#print(alt)
 			if(get_cell_atlas_coords(0,coords,false) == Vector2i(-1,-1)):
 				# A cell doesn't exist at these coordinates, so 
 				# we're creating one
-				if(alt>=0 and alt<23):
+				
+				# Deep water
+				if(alt>=level1 and alt<level2):
 					atlas_coords = Vector2(13,2)
 					set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=23 and alt<26):
+				#Semi-deep water
+				if(alt>=level2 and alt<level3):
 					atlas_coords = Vector2(14,2)
 					set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=26 and alt<27):
+				# Shallow water
+				if(alt>=level3 and alt<level4):
 					atlas_coords = Vector2(15,0)
 					set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=27 and alt<30):
+				#Sand
+				if(alt>level4 and alt<level5):
 					# Trees....let's seed a terrain_randomizer for reporduceable 
 					var sand = terrain_randomizer.randi_range(2,3)
-					print("sand: "+str(sand))
+					#print("sand: "+str(sand))
 					match sand:
 						0:
 							atlas_coords = Vector2(0,0)
@@ -77,13 +94,13 @@ func generate_chunk(position):
 						3:
 							atlas_coords = Vector2(3,0)
 							set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=30 and alt<33):
+				if(alt>level5 and alt<level6):
 					atlas_coords = Vector2(0,2)
 					set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=33 and alt<36):
+				if(alt>=level6 and alt<level7):
 					# Trees....let's seed a terrain_randomizer for reporduceable 
 					var tree = terrain_randomizer.randi_range(0,4)
-					print("tree: "+str(tree))
+					#print("tree: "+str(tree))
 					match tree:
 						0:
 							atlas_coords = Vector2(0,4)
@@ -100,18 +117,10 @@ func generate_chunk(position):
 						4:
 							atlas_coords = Vector2(0,6)
 							set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=36 and alt<37):
-					# Trees....let's seed a terrain_randomizer for reporduceable 
-					var snow = terrain_randomizer.randi_range(0,1)
-					print("snow: "+str(snow))
-					match snow:
-						0:
-							atlas_coords = Vector2(6,2)
-							set_cell(0, coords,2, atlas_coords, 0 )
-						1:
-							atlas_coords = Vector2(7,2)
-							set_cell(0, coords,2, atlas_coords, 0 )
-				if(alt>=37 and alt<38):
+				if(alt>=level7 and alt<level8):
+					atlas_coords = Vector2(6,2)
+					set_cell(0, coords,2, atlas_coords, 0 )
+				if(alt>=level8 and alt<level9):
 					atlas_coords = Vector2(10,3)
 					set_cell(0, coords,2, atlas_coords, 0 )
 			else:
