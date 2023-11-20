@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cnxxq0c5df8m7" path="res://icon.svg" id="2_lhdu0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8aret"]
-radius = 54.5578
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.09, 0.09)
 script = ExtResource("1_0kbkx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_lhdu0")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
