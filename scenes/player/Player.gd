@@ -8,10 +8,10 @@ var buttons = {
 @onready var tile_map = $"../TileMap"
 
 const SPEED = 200
-const PLAYER_MOVE_SPEED = 8
+const PLAYER_MOVE_SPEED = 1
 
 func _ready():
-	position = tile_map.map_to_local(Vector2i(-75,100))
+	position = tile_map.map_to_local(Vector2i(-160,100))
 	tile_map.generate_chunk(position)
 
 func _input(event):
@@ -71,11 +71,10 @@ func move_on_map(direction):
 		
 
 func check_valid_tile(target_location):
-	# var check = tile_map.get_cell_atlas_coords(0,target_location,false)
-	# print(check)
-	# if(check != Vector2i(-1,-1)):
-	# 	var data = tile_map.get_cell_tile_data(0, target_location)
-	# 	return data.get_custom_data("Walkable")
-	# else:
-	# 	return false
-	return true
+	var check = tile_map.get_cell_atlas_coords(0,target_location,false)
+	print(check)
+	if(check != Vector2i(-1,-1)):
+		var data = tile_map.get_cell_tile_data(0, target_location)
+		return data.get_custom_data("Walkable")
+	else:
+		return false

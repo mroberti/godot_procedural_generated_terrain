@@ -11,7 +11,7 @@ scale = Vector2(0.09, 0.09)
 script = ExtResource("1_0kbkx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_lhdu0")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
