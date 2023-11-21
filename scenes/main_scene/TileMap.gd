@@ -134,15 +134,30 @@ func generate_chunk(position):
 						3:
 							atlas_coords = Vector2(16,24)
 							set_cell(0, coords,0, atlas_coords, 0 )
-					sand = terrain_randomizer.randi_range(0,50)
-					#print("sand: "+str(sand))
-					match sand:
+					# Flowers
+					var flowers = terrain_randomizer.randi_range(0,50)
+					match flowers:
 						0:
 							atlas_coords = Vector2(1,1)
 							set_cell(1, coords,8, atlas_coords, 0 )
 						1:
 							atlas_coords = Vector2(3,1)
-							set_cell(1, coords,8, atlas_coords, 0 )
+							set_cell(1, coords,8, atlas_coords, 0 )						
+					var settlements = terrain_randomizer.randi_range(0,5000)
+					#Settlements
+					match settlements:
+						1:
+							atlas_coords = Vector2(1,0)
+							set_cell(1, coords,3, atlas_coords, 0 )
+						2:
+							atlas_coords = Vector2(1,1)
+							set_cell(1, coords,3, atlas_coords, 0 )
+						3:
+							atlas_coords = Vector2(1,2)
+							set_cell(1, coords,3, atlas_coords, 0 )
+						4:
+							atlas_coords = Vector2(1,3)
+							set_cell(1, coords,3, atlas_coords, 0 )
 				if(alt>=semi_forested and alt<forest):
 					# Trees....let's seed a terrain_randomizer for reporduceable 
 					var tree = terrain_randomizer.randi_range(0,3)
