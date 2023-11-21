@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://byj514qti8eh4" path="res://scenes/manger/enemy_manager.tscn" id="1_ycl4r"]
 [ext_resource type="PackedScene" uid="uid://b0ff2tyoh62tv" path="res://scenes/GameCamera/game_camera.tscn" id="2_5vw0p"]
-[ext_resource type="Texture2D" uid="uid://delsiw56o1f88" path="res://assets/spritesheets/Minifantasy_TinyOverworldAllTiles.png" id="3_t1uee"]
+[ext_resource type="Texture2D" uid="uid://delsiw56o1f88" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldAllTiles.png" id="3_t1uee"]
 [ext_resource type="Texture2D" uid="uid://cu20tl7xo5ksi" path="res://biomes.png" id="4_elk4m"]
 [ext_resource type="Texture2D" uid="uid://v0ls1jjvgt8o" path="res://assets/spritesheets/TinyRTS_v06/TinyRTS_v06.png" id="5_canuo"]
 [ext_resource type="Texture2D" uid="uid://dka6v2qapxwv6" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldConstructions.png" id="6_crefx"]
 [ext_resource type="Script" path="res://scenes/main_scene/TileMap.gd" id="6_rhs0u"]
 [ext_resource type="Texture2D" uid="uid://cnn8kgc1kwjyj" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldAllProps.png" id="7_m6ovc"]
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="7_we0jp"]
-[ext_resource type="PackedScene" uid="uid://cyftuo4syatlv" path="res://addons/panku_console/console.tscn" id="8_ar5v6"]
+[ext_resource type="PackedScene" path="res://addons/panku_console/console.tscn" id="8_ar5v6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_868kg"]
 
