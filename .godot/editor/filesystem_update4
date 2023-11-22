@@ -1,11 +1,7 @@
-res://oldtilemap.gd
-res://scenes/main_scene/tile_map.tscn
-res://addons/panku_console/res/panku_console_theme.tres
-res://scenes/main_scene/TileMap.gd
 res://scenes/player/Player.gd
-res://TileMap.gd
 res://scenes/basic_enemy/enemy.tscn
+res://scenes/main_scene/TileMap.gd
+res://TileMap.gd
 res://scenes/player/Player.tscn
 res://scenes/manger/enemy_manager.tscn
 res://scenes/GameCamera/game_camera.tscn
-res://scenes/manger/enemy_manager.gd
