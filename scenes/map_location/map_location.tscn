@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkkgb843a38cw"]
+
+[ext_resource type="Script" path="res://scenes/main_scene/map_location.gd" id="1_wr2tm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f3m3p"]
+
+[node name="map_location" type="Area2D"]
+script = ExtResource("1_wr2tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f3m3p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -46,6 +46,17 @@ func _ready():
 	water_timer.set_one_shot(false) # Make sure it loops
 	water_timer.start()
 
+	var player_move_timer = Timer.new()
+	add_child(player_move_timer)
+
+	player_move_timer.timeout.connect(move_player)
+	player_move_timer.set_wait_time(0.05)
+	player_move_timer.set_one_shot(false) # Make sure it loops
+	player_move_timer.start()
+
+func move_player():
+	player.move_on_map()	
+
 
 func _on_Timer_timeout():
 	# var the_monsters = get_tree().get_nodes_in_group("monsters")
@@ -56,6 +67,7 @@ func _on_Timer_timeout():
 	get_tree().call_group("monsters", "random_idle_animation")
 	get_tree().call_group("monsters", "_move_randomly", self)
 # 		tempMonster._move_randomly(self)
+
 
 
 func generate_chunk(position):
@@ -111,13 +123,13 @@ func generate_chunk(position):
 					match sand:
 						0:
 							atlas_coords = Vector2(1,29)
-							set_cell(1, coords+Vector2i(-1.0,0),8, atlas_coords, 0 )
+							set_cell(1, coords+Vector2i(-1.0,0),1, atlas_coords, 0 )
 							atlas_coords = Vector2(2,29)
-							set_cell(1, coords,8, atlas_coords, 0 )
+							set_cell(1, coords,1, atlas_coords, 0 )
 							atlas_coords = Vector2(1,30)
-							set_cell(1, coords+Vector2i(-1.0,1.0),8, atlas_coords, 0 )
+							set_cell(1, coords+Vector2i(-1.0,1.0),1, atlas_coords, 0 )
 							atlas_coords = Vector2(2,30)
-							set_cell(1, coords+Vector2i(0.0,1.0),8, atlas_coords, 0 )
+							set_cell(1, coords+Vector2i(0.0,1.0),1, atlas_coords, 0 )
 				if(alt>=grassland and alt<semi_forested):
 					var sand = terrain_randomizer.randi_range(0,3)
 					#print("sand: "+str(sand))
@@ -139,25 +151,33 @@ func generate_chunk(position):
 					match flowers:
 						0:
 							atlas_coords = Vector2(1,1)
-							set_cell(1, coords,8, atlas_coords, 0 )
+							set_cell(1, coords,1, atlas_coords, 0 )
 						1:
 							atlas_coords = Vector2(3,1)
-							set_cell(1, coords,8, atlas_coords, 0 )						
-					var settlements = terrain_randomizer.randi_range(0,5000)
+							set_cell(1, coords,1, atlas_coords, 0 )						
+					var settlements = terrain_randomizer.randi_range(0,15000)
 					#Settlements
 					match settlements:
+						0:
+							var sprite = Sprite2D.new()
+							sprite.texture = load("res://assets/spritesheets/overworld_tiles.sprites/Tiny_Constructions_16.tres")
+							add_child(sprite)
+							sprite.position = map_to_local(coords)
 						1:
-							atlas_coords = Vector2(1,0)
-							set_cell(1, coords,3, atlas_coords, 0 )
+							var sprite = Sprite2D.new()
+							sprite.texture = load("res://assets/spritesheets/overworld_tiles.sprites/Tiny_Constructions_22.tres")
+							add_child(sprite)
+							sprite.position = map_to_local(coords)
 						2:
-							atlas_coords = Vector2(1,1)
-							set_cell(1, coords,3, atlas_coords, 0 )
+							var sprite = Sprite2D.new()
+							sprite.texture = load("res://assets/spritesheets/overworld_tiles.sprites/Tiny_Constructions_24.tres")
+							add_child(sprite)
+							sprite.position = map_to_local(coords)
 						3:
-							atlas_coords = Vector2(1,2)
-							set_cell(1, coords,3, atlas_coords, 0 )
-						4:
-							atlas_coords = Vector2(1,3)
-							set_cell(1, coords,3, atlas_coords, 0 )
+							var sprite = Sprite2D.new()
+							sprite.texture = load("res://assets/spritesheets/overworld_tiles.sprites/Tiny_Constructions_17.tres")
+							add_child(sprite)
+							sprite.position = map_to_local(coords)
 				if(alt>=semi_forested and alt<forest):
 					# Trees....let's seed a terrain_randomizer for reporduceable 
 					var tree = terrain_randomizer.randi_range(0,3)

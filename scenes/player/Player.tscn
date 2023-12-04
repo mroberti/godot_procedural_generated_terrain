@@ -1,20 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://4mwi1o147dyh"]
+[gd_scene load_steps=5 format=3 uid="uid://4mwi1o147dyh"]
 
 [ext_resource type="Script" path="res://scenes/player/Player.gd" id="1_0kbkx"]
 [ext_resource type="Texture2D" uid="uid://cnxxq0c5df8m7" path="res://icon.svg" id="2_lhdu0"]
+[ext_resource type="PackedScene" uid="uid://b0ff2tyoh62tv" path="res://scenes/GameCamera/game_camera.tscn" id="3_us2e7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8aret"]
-radius = 6.0
+radius = 22.2222
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.09, 0.09)
 script = ExtResource("1_0kbkx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.09, 0.09)
+scale = Vector2(0.33, 0.33)
 texture = ExtResource("2_lhdu0")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_8aret")
+
+[node name="GameCamera" parent="." instance=ExtResource("3_us2e7")]

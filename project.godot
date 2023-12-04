@@ -15,6 +15,14 @@ run/main_scene="res://scenes/main_scene/tile_map.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToastParty="*res://addons/toastparty/toast-autoload.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg", "res://addons/toastparty/plugin.cfg")
+
 [input]
 
 move_left={

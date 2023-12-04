@@ -9,6 +9,7 @@ var move_distance = 1
 func _ready():
 	#print("Enemy Ready")
 	add_to_group("monsters")
+	name="Slenemy "
 	#print(get_tree().get_nodes_in_group("monsters").size())
 
 
