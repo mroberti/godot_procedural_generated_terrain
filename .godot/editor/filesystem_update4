@@ -7,3 +7,5 @@ res://scenes/main_scene/map_location.gd
 res://scenes/basic_enemy/enemy.tscn
 res://scenes/map_location/map_location.tscn
 res://scenes/basic_enemy/enemy.gd
+res://addons/toastparty/toast_label/ToastLabel.gd
+res://addons/codeandweb.texturepacker/texturepacker_import_spritesheet.gd

@@ -8,14 +8,14 @@ var buttons = {
 @onready var tile_map = $"../TileMap"
 
 const SPEED = 200
-const PLAYER_MOVE_SPEED = 1	
+const PLAYER_MOVE_SPEED = 1
 var direction = Vector2i(0,0)
 
 
 func _ready():
 	position = tile_map.map_to_local(Vector2i(-20,-30))
 	tile_map.generate_chunk(position)
-	set_name.call_deferred("The Moist Player")
+	set_name.call_deferred("The Player")
 
 func _input(event):
 	# velocity.x = Input.get_axis("ui_left", "ui_right")
