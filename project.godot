@@ -12,12 +12,16 @@ config_version=5
 
 config/name="procedural gen"
 run/main_scene="res://scenes/main_scene/tile_map.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 ToastParty="*res://addons/toastparty/toast-autoload.gd"
+
+[debug]
+
+gdscript/warnings/integer_division=0
 
 [editor_plugins]
 

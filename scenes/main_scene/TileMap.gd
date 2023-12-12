@@ -70,13 +70,13 @@ func _on_Timer_timeout():
 
 
 
-func generate_chunk(position):
-	var tile_pos = local_to_map(position)
+func generate_chunk(passed_position):
+	var tile_pos = local_to_map(passed_position)
 	altitude.frequency = granularity
 	for x in range(width):
 		for y in range(height):
-			var coords = Vector2i(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)
-			var alt = altitude.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*150
+			var coords = Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)
+			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
 			var atlas_coords
 			# print("Alt: "+str(alt))
 			#print("Alt: "+str(alt))
@@ -223,13 +223,13 @@ func generate_chunk(position):
 				pass;
 
 func animate_stuff():
-	var t = Time.get_ticks_msec()
+	#var t = Time.get_ticks_msec()
 	var tile_pos = local_to_map(player.position)
 	altitude.frequency = granularity
 	for x in range(width):
 		for y in range(height):
-			var coords = Vector2i(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)
-			var alt = altitude.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*150
+			var coords = Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)
+			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
 			var atlas_coords
 			# Deep water
 			if(alt>=deepest_water and alt<shallow_water):
@@ -271,8 +271,8 @@ func animate_stuff2():
 	altitude.frequency = granularity
 	for x in range(width):
 		for y in range(height):
-			var coords = Vector2i(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)
-			var alt = altitude.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*150
+			var coords = Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)
+			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
 			var atlas_coords
 			# Deep water
 			if(alt>=deepest_water and alt<shallow_water):
@@ -305,10 +305,10 @@ func animate_stuff2():
 				
 # 	for x in range(width):
 # 		for y in range(height):
-# 			var coords = Vector2i(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)
-# 			var moist = moisture.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*10
-# 			var temp = temperature.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*10
-# 			var alt = altitude.get_noise_2d(tile_pos.x-width/2 + x, tile_pos.y-height/2 + y)*150
+# 			var coords = Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)
+# 			var moist = moisture.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*10
+# 			var temp = temperature.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*10
+# 			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
 # 			var atlas_coords = Vector2(3 if alt < 2 else round((moist + 10) / 5), round((temp + 10) / 5))
 # 			if(get_cell_atlas_coords(0,coords,false) == Vector2i(-1,-1)):
 # 				# A cell doesn't exist at these coordinates, so 

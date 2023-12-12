@@ -56,7 +56,7 @@ func move_down(tile_map):
 func move_on_map(tile_map,direction):
 	var source_location = tile_map.local_to_map(position)
 	var target_location = source_location + direction
-	var target_map_location = tile_map.map_to_local(target_location)
+	#var target_map_location = tile_map.map_to_local(target_location)
 	#print("Check result: "+str(check_valid_tile(tile_map,target_location)))
 	if(check_valid_tile(tile_map,target_location)):
 		tile_map.generate_chunk(position)
