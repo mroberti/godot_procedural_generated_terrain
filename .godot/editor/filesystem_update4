@@ -1,3 +1,5 @@
 res://scenes/map_location/map_location.gd
+res://scenes/map_location/map_location.tscn
 res://scenes/main_scene/TileMap.gd
 res://scenes/player/Player.gd
+res://scenes/main_scene/tile_map.tscn
