@@ -1,2 +1,3 @@
+res://scenes/basic_enemy/enemy.tscn
 res://scenes/main_scene/TileMap.gd
 res://scenes/player/Player.gd
