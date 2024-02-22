@@ -50,7 +50,7 @@ func _ready():
 	add_child(player_move_timer)
 
 	player_move_timer.timeout.connect(move_player)
-	player_move_timer.set_wait_time(0.25)
+	player_move_timer.set_wait_time(0.05)
 	player_move_timer.set_one_shot(false) # Make sure it loops
 	player_move_timer.start()
 

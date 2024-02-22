@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 ToastParty="*res://addons/toastparty/toast-autoload.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [debug]
 
@@ -31,7 +30,7 @@ directories/dtl_directory={}
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/toastparty/plugin.cfg")
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg", "res://addons/coi_serviceworker/plugin.cfg", "res://addons/toastparty/plugin.cfg")
 
 [input]
 
