@@ -22,7 +22,7 @@ func _on_body_entered(body):
 		"gravity": "bottom",               # top or bottom
 		"direction": "right",           # left or center or right
 	})
-	go_to_next_scene()
+	#go_to_next_scene()
 	
 func _on_body_exited(body):
 	ToastParty.show({

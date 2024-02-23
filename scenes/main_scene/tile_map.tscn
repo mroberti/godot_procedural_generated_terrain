@@ -2644,16 +2644,17 @@ tile_set = SubResource("TileSet_sdiiq")
 format = 2
 layer_1/tile_data = PackedInt32Array()
 script = ExtResource("1_ggp1g")
-deepest_water = -200.0
-shallow_water = -80.0
-very_shallow_water = -16.99
-grassland = 20.0
-semi_forested = 45.0
-forest = 57.855
-snow = 63.73
-mountains = 70.015
-mountains2 = 284.78
-granularity = -0.005
+deepest_water = -100.0
+shallow_water = -85.0
+very_shallow_water = -45.0
+sandy_beach = -35.0
+grassland = -10.0
+semi_forested = 35.0
+forest = 60.0
+snow = 70.0
+mountains = 80.0
+mountains2 = 120.0
+granularity = 0.005
 
 [node name="map_location" parent="TileMap" instance=ExtResource("6_6iuqd")]
 

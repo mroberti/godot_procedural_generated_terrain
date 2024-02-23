@@ -3,8 +3,8 @@ extends TileMap
 var moisture = FastNoiseLite.new()
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
-var width = 41
-var height = 25
+var width = 42	
+var height = 25	
 const city_icon = preload("res://scenes/village.tscn")
 var _timer = null
 var water_timer = null
@@ -79,7 +79,7 @@ func generate_chunk(passed_position):
 			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
 			var atlas_coords
 			# print("Alt: "+str(alt))
-			#print("Alt: "+str(alt))
+			# print("Alt: "+str(alt))
 			# 1,9 Grass
 			# 2,33 Water
 			#print(alt)

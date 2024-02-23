@@ -65,9 +65,9 @@ res://assets/spritesheets/overworld_tiles.sprites/Tiny_Constructions_62.tres::df
 res://scenes/basic_enemy/enemy.tscn::7437cfdb04cc5acd399be0e86ba94b08::1707355924::res://.godot/exported/133200997/export-7b483dbf8b47dbbb115fa70c24b3f036-enemy.scn
 res://scenes/GameCamera/game_camera.tscn::6db40718ff6de0be9d7b3318727fce5f::1701910746::res://.godot/exported/133200997/export-234a00b568a3d0b618ae9c9c8a922976-game_camera.scn
 res://scenes/location_scene/location_scene.tscn::e37e39674bf511e82fdb1c0473d0e0fd::1707178158::res://.godot/exported/133200997/export-6490bd6375132799c546017dfbb660a5-location_scene.scn
-res://scenes/main_scene/tile_map.tscn::16c7444c80034aefa5526e8153942161::1708562486::res://.godot/exported/133200997/export-8ebfe5140443869a3f4bd584d88c24c4-tile_map.scn
-res://scenes/manger/enemy_manager.tscn::dc5a3a623bf5bcacfd1707f4f1596685::1707178158::res://.godot/exported/133200997/export-69dd6143ef75e47deded441f3b6442df-enemy_manager.scn
+res://scenes/main_scene/tile_map.tscn::21925db8c082e09795ab3796ef7a8d4c::1708652638::res://.godot/exported/133200997/export-8ebfe5140443869a3f4bd584d88c24c4-tile_map.scn
+res://scenes/manger/enemy_manager.tscn::dc5a3a623bf5bcacfd1707f4f1596685::1708652627::res://.godot/exported/133200997/export-69dd6143ef75e47deded441f3b6442df-enemy_manager.scn
 res://scenes/map_location/map_location.tscn::38c82ff9474019c6528d83975c8b3ec0::1707178158::res://.godot/exported/133200997/export-41541d6ff22ec22f4b9458e6ab49e420-map_location.scn
-res://scenes/player/Player.tscn::111ebcde6a07e8f67f327139792a7605::1702581280::res://.godot/exported/133200997/export-a4e9bb150591131ae307f440fab940ce-Player.scn
+res://scenes/player/Player.tscn::dc1630c1dc50b67446d775c93b09f9c0::1708652627::res://.godot/exported/133200997/export-a4e9bb150591131ae307f440fab940ce-Player.scn
 res://scenes/health_bar.tscn::0eccb9d54c466fb6cf23f37647779126::1700068591::res://.godot/exported/133200997/export-547b0b758c2a105ac11ae0ed54fbe452-health_bar.scn
 res://scenes/village.tscn::295ecebb96556b909926746dd4e688dc::1700068591::res://.godot/exported/133200997/export-e5e98779eb325577f46722db33adc018-village.scn
