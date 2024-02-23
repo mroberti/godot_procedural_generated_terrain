@@ -298,21 +298,3 @@ func animate_stuff2():
 				else:
 					atlas_coords = Vector2(6,18)
 					set_cell(0, coords,0, atlas_coords, 0 )					
-
-# This is the old method
-# func generate_chunk(position):
-# 	var tile_pos = local_to_map(position)
-				
-# 	for x in range(width):
-# 		for y in range(height):
-# 			var coords = Vector2i(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)
-# 			var moist = moisture.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*10
-# 			var temp = temperature.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*10
-# 			var alt = altitude.get_noise_2d(tile_pos.x-width/2.0 + x, tile_pos.y-height/2.0 + y)*150
-# 			var atlas_coords = Vector2(3 if alt < 2 else round((moist + 10) / 5), round((temp + 10) / 5))
-# 			if(get_cell_atlas_coords(0,coords,false) == Vector2i(-1,-1)):
-# 				# A cell doesn't exist at these coordinates, so 
-# 				# we're creating one
-# 				set_cell(0, coords,1, atlas_coords, 0 )
-# 			else:
-# 				pass;
