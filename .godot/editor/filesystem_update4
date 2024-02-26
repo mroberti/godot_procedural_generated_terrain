@@ -1,7 +1,6 @@
-res://scenes/main_scene/tile_map.tscn
 res://scenes/main_scene/TileMap.gd
+res://scenes/main_scene/tile_map.tscn
 res://scenes/player/Player.gd
 res://scenes/player/Player.tscn
 res://scenes/manger/enemy_manager.tscn
-res://scenes/main_scene/CanvasLayer.gd
 res://scenes/sliders_for_terrain/sliders_for_terrain.tscn

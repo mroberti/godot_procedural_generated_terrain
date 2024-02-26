@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://2oo8sfrse20b"]
+[gd_scene load_steps=13 format=3 uid="uid://2oo8sfrse20b"]
 
+[ext_resource type="Script" path="res://scenes/main_scene/CanvasLayer.gd" id="1_0csn1"]
 [ext_resource type="Script" path="res://scenes/main_scene/TileMap.gd" id="1_ggp1g"]
 [ext_resource type="Texture2D" uid="uid://delsiw56o1f88" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldAllTiles.png" id="2_17jd4"]
 [ext_resource type="PackedScene" uid="uid://4mwi1o147dyh" path="res://scenes/player/Player.tscn" id="2_subdn"]
 [ext_resource type="Texture2D" uid="uid://btj00780snu05" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldAllProps.png" id="3_470jc"]
 [ext_resource type="Texture2D" uid="uid://t3sl8s1mhdxh" path="res://assets/spritesheets/minifantasy/Minifantasy_TinyOverworldConstructions.png" id="4_xs0ss"]
 [ext_resource type="PackedScene" uid="uid://dkkgb843a38cw" path="res://scenes/map_location/map_location.tscn" id="6_6iuqd"]
+[ext_resource type="PackedScene" uid="uid://b1keuj8bmv45d" path="res://scenes/sliders_for_terrain/sliders_for_terrain.tscn" id="7_xx1do"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfeft"]
 texture = ExtResource("2_17jd4")
@@ -2635,95 +2637,39 @@ sources/2 = SubResource("TileSetAtlasSource_xia47")
 
 [node name="Main Scene" type="Node2D"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_0csn1")
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("7_xx1do")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -964.0
+offset_top = -69.0
+offset_right = -964.0
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 1
+scale = Vector2(0.406899, 0.406899)
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_sdiiq")
 format = 2
 layer_1/tile_data = PackedInt32Array()
 script = ExtResource("1_ggp1g")
+deepest_water = -100.0
+shallow_water = -85.0
+very_shallow_water = -45.0
+sandy_beach = -35.0
+grassland = -10.0
+semi_forested = 35.0
+forest = 60.0
+snow = 70.0
+mountains = 80.0
+mountains2 = 120.0
 granularity = 0.005
 
 [node name="map_location" parent="TileMap" instance=ExtResource("6_6iuqd")]
 
 [node name="Player" parent="." instance=ExtResource("2_subdn")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_right = 0.316
-anchor_bottom = 1.0
-offset_right = -0.0320129
-offset_bottom = 9.0
-
-[node name="HSlider" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider2" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider3" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider4" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider5" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider6" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider7" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider8" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = -100.0
-step = 0.01
-
-[node name="HSlider9" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = 0.001
-max_value = 0.1
-step = 0.001
-value = 0.003
-
-[node name="HSlider10" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = 0.001
-max_value = 0.1
-step = 0.001
-value = 0.003
-
-[node name="HSlider11" type="HSlider" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-min_value = 1e+08
-max_value = 1e+09
-value = 1e+08
-
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider" to="TileMap" method="_adjust_0"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider2" to="TileMap" method="_adjust_1"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider3" to="TileMap" method="_adjust_2"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider4" to="TileMap" method="_adjust_3"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider5" to="TileMap" method="_adjust_4"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider6" to="TileMap" method="_adjust_5"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider7" to="TileMap" method="_adjust_6"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider8" to="TileMap" method="_adjust_7"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider9" to="TileMap" method="_adjust_8"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider10" to="TileMap" method="_adjust_granularity"]
-[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider11" to="TileMap" method="_adjust_moisture_seed"]

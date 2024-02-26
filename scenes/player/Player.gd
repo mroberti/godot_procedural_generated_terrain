@@ -21,6 +21,8 @@ func _input(event):
 	# velocity.x = Input.get_axis("ui_left", "ui_right")
 	# velocity.y = Input.get_axis("ui_up", "ui_down")
 	# velocity = velocity.normalized()*SPEED
+	if event.is_action_pressed("stop_moving"):
+		direction = Vector2i(0,0)
 
 	if event.is_action_pressed("move_left") or event.is_action_pressed("ui_left"):
 		direction = Vector2i(-PLAYER_MOVE_SPEED,0)
