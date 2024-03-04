@@ -204,6 +204,8 @@ func _adjust_moisture_seed(value):
 	print("altitude.seed: "+str(altitude.seed))
 	generate_chunk(player.position)
 
+	# Print the player location
+	print("Player location: "+str(player.position))
 	# temperature.seed = -175673643 #randi()
 	# altitude.seed = 778520879 #randi()
 	# terrain_randomizer.seed = altitude.seed
